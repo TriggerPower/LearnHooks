@@ -1,14 +1,16 @@
-import React , {useContext} from 'react'
+import React , {useContext, useEffect} from 'react'
 import {TestContext} from './test'
 
-console.log(TestContext)
-var {name} = useContext(TestContext);
+const Child2 = ()=>{
+    let obj = useContext(TestContext);
 
-function child2(){
-
+    useEffect(()=>{
+        console.log("Child2----属性发生变化")
+    },[obj.skill])
+    
     return(
-        <h3>2.学习{name}的准备工作</h3>
+        <h3>2.学习{obj.skill}的准备工作</h3>
     )
 }
 
-export default child2
+export default Child2

@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Test from './test'
+import RouteCconfig from './router/router'
 
-ReactDOM.render(<Test />, document.getElementById('root'));
+ReactDOM.render(<RouteCconfig />, document.getElementById('root'));
